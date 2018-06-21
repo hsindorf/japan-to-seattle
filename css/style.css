@@ -67,6 +67,14 @@ main {
   padding:  60px;
 }
 
+h2 {
+  font-size: 2em;
+}
+  
+h3 {
+  font-size: 1.5em;
+}
+
 /* activity styling */
 
 .activity-container {

@@ -6,29 +6,7 @@ var activeFilters = [false, false, false];
 // stories the filtered activities for this session (array of objects - pulled from local storage on page load, otherwise rechosen when a new filter is selected)
 var activitiesFiltered = [];
 
-// function to run through all filters
-function runFilters() {
-  // unfilter
-  if (activeFilters[0] === true) {
-    //do filter price
-  }
-  if (activeFilters[1] === true) {
-    //do filter type
-  }
-  if (activeFilters[2] === true) {
-    // do filter place
-  }
-}
-
-// run a single filter
-function filter(whichFilter) {}
-
 // PAGE RENDERING
-
-// renders a single activity
-function renderAnActivity() {
-  
-}
 
 // renders the list of activities to the page
 function renderTheList(renderWhere) {
@@ -45,8 +23,8 @@ function renderTheList(renderWhere) {
     var activityInfo = document.createElement('div');
     activityInfo.setAttribute('class', 'activity-info');
     activityContainer.appendChild(activityInfo);
-    // to append info - name
-    var activityName = document.createElement('p');
+    // name
+    var activityName = document.createElement('h3');
     activityName.textContent = activitiesFiltered[i].name;
     activityInfo.appendChild(activityName);
     // price
@@ -61,6 +39,10 @@ function renderTheList(renderWhere) {
     var activityArea = document.createElement('p');
     activityArea.textContent = activitiesFiltered[i].area;
     activityInfo.appendChild(activityArea);
+    // desc
+    var activityDesc = document.createElement('p');
+    activityDesc.textContent = activitiesFiltered[i].desc;
+    activityInfo.appendChild(activityDesc);
     // map
     var activityMapP = document.createElement('p');
     activityInfo.appendChild(activityMapP);
@@ -75,14 +57,9 @@ function renderTheList(renderWhere) {
 
 // LOCAL STORAGE
 
-// store current filters and current activities
-function storeFilters() {}
-
-// get from storage
-function getFilters() {}
 
 // store to suitcase
-function storeFavorites() {}
+function storeFavoriteToStorage() {}
 
 // get suitcase
-function getFavorites() {}
+function getFavoritesFromStorage() {}
