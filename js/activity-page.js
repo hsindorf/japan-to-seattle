@@ -7,9 +7,16 @@ var activeFilters = [false, false, false];
 
 // PAGE LOAD FUNCTIONALITY
 
+//TEMPORARY TO TEST RENDERING
+activitiesFiltered = Activity.all;
+
+addFilterOptions('select-price', prices);
+addFilterOptions('select-type', types);
+addFilterOptions('select-area', areas);
+
 getFiltersFromStorage();
 runFilters();
-renderTheList(suitcaseContainer);
+renderTheList(activitiesContainer);
 
 // FILTER FUNCTIONALITY
 
@@ -34,9 +41,15 @@ function runFilters() {
 // run a single filter
 function filter(whichFilter, filterValue) {}
 
-// add filters to page
-function addFilterOptions() {
-
+// add filter options to page
+function addFilterOptions(whichSelect, whichArray) {
+  var select = document.getElementById(whichSelect);
+  for (var i = 0; i < whichArray.length; i++) {
+    var option = document.createElement('option');
+    option.setAttribute('value', i - 1);
+    option.textContent = whichArray[i];
+    select.appendChild(option);
+  }
 }
 
 // LOCAL STORAGE
