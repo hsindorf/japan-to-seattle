@@ -7,20 +7,17 @@ body {
 
 nav {
   height: 32px;
-  background-color: #404040;
+  background-color: #1f1f1f;
 }
 
-nav ul {
+header nav ul,
+#footer-nav {
   float: right;
 }
 
 li {
   padding: 8px 1.5em;
   display: inline-block;
-}
-
-main {
-  clear: both;
 }
 
 nav a {
@@ -35,9 +32,18 @@ nav a:hover {
 /* page heading section */
 
 #heading-section {
+  background-size: 2500px;
+}
+
+#home #heading-section {
+  height: calc(100vh - 33px);
+  background-image: url('../img/seattle.jpg');
+  background-size: cover;
+}
+
+#not-home #heading-section {
   height: 200px;
   background-image: url('../img/emp.jpg');
-  background-size: 2500px;
 }
 
 h1 {
@@ -48,12 +54,21 @@ h1 {
   text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 
+/* main content section */
+
 main {
-  background: rgb(223, 235, 231);
+  clear: both;
+  background: rgb(211, 211, 211);
   width: 800px;
   max-width: 100vw;
-  height: 100vh;
+  min-height: calc(100vh - 264px);
   box-sizing: border-box;
   margin: 0 auto;
   padding:  20px;
+}
+
+/* footer */
+
+#to-top {
+  float: left;
 }
