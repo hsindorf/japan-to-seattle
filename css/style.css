@@ -1,0 +1,74 @@
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+/* nav styles */
+
+nav {
+  height: 32px;
+  background-color: #1f1f1f;
+}
+
+header nav ul,
+#footer-nav {
+  float: right;
+}
+
+li {
+  padding: 8px 1.5em;
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+/* page heading section */
+
+#heading-section {
+  background-size: 2500px;
+}
+
+#home #heading-section {
+  height: calc(100vh - 33px);
+  background-image: url('../img/seattle.jpg');
+  background-size: cover;
+}
+
+#not-home #heading-section {
+  height: 200px;
+  background-image: url('../img/emp.jpg');
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  padding: 76px 0;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+}
+
+/* main content section */
+
+main {
+  clear: both;
+  background: rgb(211, 211, 211);
+  width: 800px;
+  max-width: 100vw;
+  min-height: calc(100vh - 264px);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding:  20px;
+}
+
+/* footer */
+
+#to-top {
+  float: left;
+}
