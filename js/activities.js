@@ -17,6 +17,8 @@ function Activity(name, price, type, areas) {
 function makeLocations() {
   var pikePlace = new Activity('Pike Place Market', prices[0], types[1], areas[0], 'img/pikeplace.jpg', 'https://goo.gl/maps/bvptei6TXYx');
   var universityCampus = new Activity('UW Campus', prices[0], types[1], areas[1]);
+  var karageSetsuna = new Activity('Karage Setsuna', prices[0], types[0], areas[2], 'img/karageSetsuna.jpg', 'https://goo.gl/maps/TE3vLmsS6f82');
+
 }
 
 makeLocations();
