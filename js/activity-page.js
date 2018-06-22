@@ -3,15 +3,11 @@
 // gets container
 var activitiesContainer = document.getElementById('activities-container');
 // stores active filters
-var activeFilters = [false, false, false];
+var activeFilters = [];
 // gets filter form
 var filterForm = document.getElementById('select-filters');
 
 // PAGE LOAD FUNCTIONALITY
-
-// TEMPORARY TO TEST RENDERING
-activitiesFiltered = Activity.all;
-// REMOVE LATER
 
 // adds filter dropdowns to page - dynamic to add more categories later
 addFilterOptions('select-price', prices);
@@ -19,34 +15,46 @@ addFilterOptions('select-type', types);
 addFilterOptions('select-area', areas);
 
 getFiltersFromStorage();
-// runFilters();
-renderTheList(activitiesContainer);
+runFilters();
 
 // FILTER FUNCTIONALITY
 
 // function to run through all filters
 function runFilters() {
-  activitiesFiltered = Activities.all;
+  storeFiltersToStorage();
+  activitiesFiltered = Activity.all;
   // run current filters
   activitiesFiltered = activitiesFiltered.filter(filterPrice);
-  localStorage.setItem('filterPrice', (document.getElementById('select-price')).value);
   activitiesFiltered = activitiesFiltered.filter(filterType);
-  localStorage.setItem('filterType', (document.getElementById('select-type')).value);
   activitiesFiltered = activitiesFiltered.filter(filterArea);
-  localStorage.setItem('filterArea', (document.getElementById('select-area')).value);
+  if (activitiesFiltered.length === 0) {
+    activitiesContainer.textContent = '';
+    var pEl = document.createElement('p');
+    pEl.textContent = 'Nothing found!';
+    activitiesContainer.appendChild(pEl);
+  } else {
+    activitiesContainer.textContent = '';
+    renderTheList(activitiesContainer);
+  }
+}
+
+function setFilters() {
+  activeFilters[0] = prices[(document.getElementById('select-price')).value];
+  activeFilters[1] = types[(document.getElementById('select-type')).value];
+  activeFilters[2] = areas[(document.getElementById('select-area')).value];
 }
 
 // run filter - price
 function filterPrice(activityOfList) {
-  return activityOfList.price === prices[(document.getElementById('select-price')).value];
+  return activityOfList.price === activeFilters[0];
 }
 // filter - type
 function filterType(activityOfList) {
-  return activityOfList.type === types[(document.getElementById('select-type')).value];
+  return activityOfList.type === activeFilters[1];
 }
 // filter - Area
 function filterArea(activityOfList) {
-  return activityOfList.area === areas[(document.getElementById('select-area')).value];
+  return activityOfList.areas === activeFilters[2];
 }
 
 // add filter options to page
@@ -60,13 +68,14 @@ function addFilterOptions(whichSelect, whichArray) {
   }
 }
 
-function removeFilters() {
-
-}
-
 // LOCAL STORAGE
 
 // store current filters and current activities
+function storeFiltersToStorage() {
+  localStorage.setItem('filterPrice', (document.getElementById('select-price')).value);
+  localStorage.setItem('filterType', (document.getElementById('select-type')).value);
+  localStorage.setItem('filterArea', (document.getElementById('select-area')).value);
+}
 
 // get from storage
 function getFiltersFromStorage() {
@@ -77,3 +86,25 @@ function getFiltersFromStorage() {
 
 // store to suitcase
 function storeFavoriteToStorage() {}
+
+
+// SET EVENT HANDLERS
+
+var filterButton = document.getElementById('run-filters');
+filterButton.addEventListener('click', filterEventHandler);
+
+function filterEventHandler(event) {
+  event.preventDefault();
+  setFilters();
+  runFilters();
+}
+
+var clearFilterButton = document.getElementById('clear-filters');
+clearFilterButton.addEventListener('click', removeFilters);
+
+function removeFilters(event) {
+  event.preventDefault();
+  activitiesContainer.textContent = '';
+  activitiesFiltered = Activity.all;
+  renderTheList(activitiesContainer);
+}

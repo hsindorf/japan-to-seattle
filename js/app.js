@@ -1,6 +1,5 @@
 // variables that store the two containers for activities
 var suitcaseContainer = document.getElementById('suitcase-container');
-var activitiesContainer = document.getElementById('activities-container');
 // stories the filtered activities for this session (array of objects - pulled from local storage on page load, otherwise rechosen when a new filter is selected)
 var activitiesFiltered = [];
 
