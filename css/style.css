@@ -29,16 +29,6 @@ nav a:hover {
   color: blue;
 }
 
-/* page heading section */
-
-/* #heading-section {
-  background-size: 2500px; */
-/* } */
-
-/* #home #heading-section {
-  height: calc(100vh - 33px);
-  background-size: cover;
-} */
 
 #not-home #heading-section {
   height: 200px;
