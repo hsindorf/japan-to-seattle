@@ -10,6 +10,7 @@ var activeFilters = [false, false, false];
 //TEMPORARY TO TEST RENDERING
 activitiesFiltered = Activity.all;
 
+// adds filter dropdowns to page - dynamic to add more categories later
 addFilterOptions('select-price', prices);
 addFilterOptions('select-type', types);
 addFilterOptions('select-area', areas);
