@@ -60,6 +60,10 @@ function filterArea(activityOfList) {
 // add filter options to page
 function addFilterOptions(whichSelect, whichArray) {
   var select = document.getElementById(whichSelect);
+  var nullOption = document.createElement('option');
+  nullOption.setAttribute('value', null);
+  nullOption.textContent = 'No Filter';
+  select.appendChild(nullOption);
   for (var i = 0; i < whichArray.length; i++) {
     var option = document.createElement('option');
     option.setAttribute('value', i);
@@ -104,6 +108,8 @@ clearFilterButton.addEventListener('click', removeFilters);
 
 function removeFilters(event) {
   event.preventDefault();
+  activeFilters = [];
+  storeFiltersToStorage();
   activitiesContainer.textContent = '';
   activitiesFiltered = Activity.all;
   renderTheList(activitiesContainer);
