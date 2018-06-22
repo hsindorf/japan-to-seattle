@@ -72,9 +72,9 @@ function addFilterOptions(whichSelect, whichArray) {
 
 // store current filters and current activities
 function storeFiltersToStorage() {
-  localStorage.setItem('filterPrice', (document.getElementById('select-price')).value);
-  localStorage.setItem('filterType', (document.getElementById('select-type')).value);
-  localStorage.setItem('filterArea', (document.getElementById('select-area')).value);
+  localStorage.setItem('filterPrice', activeFilters[0]);
+  localStorage.setItem('filterType', activeFilters[1]);
+  localStorage.setItem('filterArea', activeFilters[2]);
 }
 
 // get from storage
