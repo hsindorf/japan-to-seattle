@@ -1,4 +1,4 @@
-var prices = ['< $50', '$50 - $150', '$150 - $500', '$500+'];
+var prices = ['< 50', '50 - 150', '150 - 500', '500+'];
 var types = ['Food', 'Sightseeing', 'Shopping'];
 var areas = ['Pike Place Market', 'Around UW Campus', 'Around Space Needle', 'Around Safeco Field', 'Outside of the City'];
 
@@ -17,7 +17,6 @@ function Activity(name, price, type, areas, image, maps, desc, website) {
 }
 
 function makeLocations() {
-
   new Activity('test Location', prices[0], types[0], areas[0], 'https://placehold.it/480x300', 'https://goo.gl/maps/bvptei6TXYx', 'A one to two sentence description of this place. Lorem ipsum something something notes something.'); 
   new Activity('Pike Place Market', 
   prices[0], 
@@ -25,7 +24,6 @@ function makeLocations() {
   areas[0], 
   'img/pikeplace.jpg', 
   'https://goo.gl/maps/bvptei6TXYx');
-  
   new Activity('UW Campus', prices[0], types[1], areas[1], 'img/uwCampus.jpg', 'https://goo.gl/maps/9Fwvkcm9kkF2', 'https://www.washington.edu/', 'The UW is one of the world’s preeminent public universities. Our impact on individuals, our region and the world is profound — whether we are launching young people into a boundless future or confronting the grand challenges of our time through undaunted research and scholarship. Ranked No. 13 in the world on the 2017 Academic Ranking of World Universities, the UW educates more than 54,000 students annually.');
   new Activity('Karaage Setsuna', prices[0], types[0], areas[2], 'img/karaageSetsuna.jpeg', 'https://goo.gl/maps/TE3vLmsS6f82');
   new Activity('Suika Seattle', prices[1], types[0], areas[2], 'img/suikaSeattle.jpg', 'https://goo.gl/maps/JuBDe3e4Bjk', 'http://suikaseattle.com');
