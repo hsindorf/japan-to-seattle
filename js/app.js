@@ -45,6 +45,7 @@ function renderTheList(renderWhere) {
     activityInfo.appendChild(activityMapP);
     var activityMapA = document.createElement('a');
     activityMapA.setAttribute('href', activitiesFiltered[i].maps);
+    activityMapA.setAttribute('class', 'button');
     activityMapA.setAttribute('target', '_blank');
     activityMapA.textContent = 'Map';
     activityMapP.appendChild(activityMapA);
