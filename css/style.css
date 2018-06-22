@@ -29,7 +29,6 @@ nav a:hover {
   color: blue;
 }
 
-
 #not-home #heading-section {
   height: 200px;
   background-image: url('../img/emp.jpg');
@@ -48,15 +47,52 @@ h1 {
 main {
   clear: both;
   background: rgb(211, 211, 211);
-  width: 800px;
-  max-width: 100vw;
-  min-height: calc(100vh - 264px);
+  width: 100%;
+  max-width: 900px;
+  height: auto;
   box-sizing: border-box;
   margin: 0 auto;
-  padding:  20px;
+  padding:  60px;
+}
+
+h2 {
+  font-size: 2em;
+}
+  
+h3 {
+  font-size: 1.5em;
+}
+
+/* activity styling */
+
+.activity-container {
+  margin: 1em 0;
+  width: 780px;
+  height: 300px;
+}
+
+.activity-container img {
+  float: left;
+  width: 480px;
+  height: 300px;
+}
+
+.activity-container .activity-info {
+  box-sizing: border-box;
+  width: 300px;
+  float: right;
+  padding: 15px 0 15px 60px;
+}
+
+.activity-container .activity-info p {
+  text-align: left;
 }
 
 /* footer */
+
+footer {
+  clear: both;
+}
 
 #to-top {
   float: left;
