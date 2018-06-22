@@ -1,4 +1,4 @@
-var prices = ['< $50', '$50 - $150', '$150 - $500', '$500+'];
+var prices = ['< 50', '50 - 150', '150 - 500', '500+'];
 var types = ['Food', 'Sightseeing', 'Shopping'];
 var areas = ['Pike Place Market', 'Around UW Campus', 'Around Space Needle', 'Around Safeco Field', 'Outside of the City'];
 

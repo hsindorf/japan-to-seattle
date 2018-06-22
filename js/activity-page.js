@@ -3,7 +3,7 @@
 // gets container
 var activitiesContainer = document.getElementById('activities-container');
 // stores active filters
-var activeFilters = [];
+var activeFilters = [null, null, null];
 // gets filter form
 var filterForm = document.getElementById('select-filters');
 
@@ -21,12 +21,17 @@ runFilters();
 
 // function to run through all filters
 function runFilters() {
-  storeFiltersToStorage();
   activitiesFiltered = Activity.all;
   // run current filters
-  activitiesFiltered = activitiesFiltered.filter(filterPrice);
-  activitiesFiltered = activitiesFiltered.filter(filterType);
-  activitiesFiltered = activitiesFiltered.filter(filterArea);
+  if (activeFilters[0] !== null && activeFilters[0] !== undefined) {
+    activitiesFiltered = activitiesFiltered.filter(filterPrice);
+  }
+  if (activeFilters[1] !== null && activeFilters[1] !== undefined) {
+    activitiesFiltered = activitiesFiltered.filter(filterType);
+  }
+  if (activeFilters[2] !== null && activeFilters[2] !== undefined) {
+    activitiesFiltered = activitiesFiltered.filter(filterArea);
+  }
   if (activitiesFiltered.length === 0) {
     activitiesContainer.textContent = '';
     var pEl = document.createElement('p');
@@ -38,6 +43,7 @@ function runFilters() {
   }
 }
 
+//adds filters to temporary memory
 function setFilters() {
   activeFilters[0] = prices[(document.getElementById('select-price')).value];
   activeFilters[1] = types[(document.getElementById('select-type')).value];
@@ -61,7 +67,7 @@ function filterArea(activityOfList) {
 function addFilterOptions(whichSelect, whichArray) {
   var select = document.getElementById(whichSelect);
   var nullOption = document.createElement('option');
-  nullOption.setAttribute('value', null);
+  nullOption.setAttribute('value', '');
   nullOption.textContent = 'No Filter';
   select.appendChild(nullOption);
   for (var i = 0; i < whichArray.length; i++) {
@@ -76,23 +82,21 @@ function addFilterOptions(whichSelect, whichArray) {
 
 // store current filters and current activities
 function storeFiltersToStorage() {
-  localStorage.setItem('filterPrice', activeFilters[0]);
-  localStorage.setItem('filterType', activeFilters[1]);
-  localStorage.setItem('filterArea', activeFilters[2]);
+  localStorage.setItem('filters', JSON.stringify(activeFilters));
 }
 
 // get from storage
 function getFiltersFromStorage() {
-  activeFilters[0] = localStorage.getItem('filterPrice');
-  activeFilters[1] = localStorage.getItem('filterType');
-  activeFilters[2] = localStorage.getItem('filterArea');
+  if (localStorage.getItem('filters')) {
+    activeFilters = JSON.parse(localStorage.getItem('filters'));
+  }
 }
 
 // store to suitcase
 function storeFavoriteToStorage() {}
 
 
-// SET EVENT HANDLERS
+// SET EVENT LISTENERS
 
 var filterButton = document.getElementById('run-filters');
 filterButton.addEventListener('click', filterEventHandler);
@@ -100,6 +104,7 @@ filterButton.addEventListener('click', filterEventHandler);
 function filterEventHandler(event) {
   event.preventDefault();
   setFilters();
+  storeFiltersToStorage();
   runFilters();
 }
 
@@ -108,9 +113,6 @@ clearFilterButton.addEventListener('click', removeFilters);
 
 function removeFilters(event) {
   event.preventDefault();
-  activeFilters = [];
-  storeFiltersToStorage();
-  activitiesContainer.textContent = '';
-  activitiesFiltered = Activity.all;
-  renderTheList(activitiesContainer);
+  activeFilters = [null, null, null];
+  runFilters();
 }
