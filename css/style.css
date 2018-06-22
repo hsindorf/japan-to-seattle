@@ -5,6 +5,10 @@ body, select, button {
   font-family: Quicksand, sans-serif;
 }
 
+a {
+  transition: .2s ease;
+}
+
 /* nav styles */
 
 nav {
@@ -117,13 +121,17 @@ footer {
   background: none;
   border: none;
   padding: 5px 15px;
-  color: #0c3535;
-  background: #97bcd1;
+  color: white;
+  background: #D54530;
   text-decoration: none;
   transition: .2s ease;
 }
 
 .button:hover {
   cursor: pointer;
-  background: #7092a7;
+  background: rgb(187, 61, 41);
+}
+
+.button:active {
+  outline: none;
 }
