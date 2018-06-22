@@ -1,4 +1,4 @@
-var prices = ['< $50', '$50 - $150', '$150 - $500', '$500+'];
+var prices = ['< 50', '50 - 150', '150 - 500', '500+'];
 var types = ['Food', 'Sightseeing', 'Shopping'];
 var areas = ['Pike Place Market', 'Around UW Campus', 'Around Space Needle', 'Around Safeco Field', 'Outside of the City'];
 
@@ -17,7 +17,6 @@ function Activity(name, price, type, areas, image, maps, desc, website) {
 }
 
 function makeLocations() {
-
   new Activity('test Location', prices[0], types[0], areas[0], 'https://placehold.it/480x300', 'https://goo.gl/maps/bvptei6TXYx', 'A one to two sentence description of this place. Lorem ipsum something something notes something.'); 
 
   new Activity('Pike Place Market', 
