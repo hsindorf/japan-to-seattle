@@ -23,8 +23,18 @@
     </div>
   </header>
   <main>
+    <h2>Cool Info about the thing</h2>
     <p>Instructions about the page here</p>
-    <section id="activity-container"></section>
+    <h2>Select Your Filters</h2>
+    <form id="select-filters">
+      <select name="price" id="select-price"></select>
+      <select name="type" id="select-type"></select>
+      <select name="area" id="select-area"></select>
+      <button name="filter" id="run-filters">Filter</button>
+      <button name="clear-filters" id="clear-filters">Clear Filters</button>
+    </form>
+    <h2>List of Activities</h2>
+    <section id="activities-container"></section>
   </main>
   <footer>
       <nav>
@@ -40,5 +50,8 @@
           </ul>
         </nav>
   </footer>
+  <script src="js/activities.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/activity-page.js"></script>
 </body>
 </html>
