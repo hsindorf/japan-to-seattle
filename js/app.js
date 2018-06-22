@@ -1,8 +1,6 @@
 // variables that store the two containers for activities
 var suitcaseContainer = document.getElementById('suitcase-container');
 var activitiesContainer = document.getElementById('activities-container');
-// stores active filters
-var activeFilters = [false, false, false];
 // stories the filtered activities for this session (array of objects - pulled from local storage on page load, otherwise rechosen when a new filter is selected)
 var activitiesFiltered = [];
 
@@ -55,8 +53,16 @@ function renderTheList(renderWhere) {
   }
 }
 
-// LOCAL STORAGE
+// remove activities from the page
+function removeActivitiesFromPage() {
+  if (suitcaseContainer) {
+    suitcaseContainer.textContent = '';
+  } else {
+    activitiesContainer.textContent = '';
+  }
+}
 
+// LOCAL STORAGE
 
 // store to suitcase
 function storeFavoriteToStorage() {}
