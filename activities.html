@@ -27,11 +27,14 @@
     <p>Instructions about the page here</p>
     <h2>Select Your Filters</h2>
     <form id="select-filters">
+      <label for="price">Price (USD)</label>
       <select name="price" id="select-price"></select>
+      <label for="type">Type of Activity</label>
       <select name="type" id="select-type"></select>
+      <label for="area">Area of Seattle</label>
       <select name="area" id="select-area"></select>
-      <button name="filter" id="run-filters">Filter</button>
-      <button name="clear-filters" id="clear-filters">Clear Filters</button>
+      <button name="filter" id="run-filters" class="button">Filter</button>
+      <button name="clear-filters" id="clear-filters" class="button">Clear Filters</button>
     </form>
     <h2>List of Activities</h2>
     <section id="activities-container"></section>

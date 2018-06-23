@@ -4,9 +4,8 @@ var suitcaseContainer = document.getElementById('suitcase-container');
 
 // PAGE LOAD FUNCTIONS
 
-getFiltersFromStorage();
-runFilters();
-renderTheList(activitiesContainer);
+activitiesFiltered = Activity.favorites.filter(filterFavorites);
+renderTheList(suitcaseContainer);
 
 // LOCAL STORAGE
 
@@ -15,3 +14,7 @@ function storeFavoriteToStorage() {}
 
 // get suitcase
 function getFavoritesFromStorage() {}
+
+function filterFavorites(activity) {
+  return (activity.favorite === true);
+}

@@ -1,6 +1,12 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body, select, button {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: Quicksand, sans-serif;
+}
+
+a {
+  transition: .2s ease;
 }
 
 /* nav styles */
@@ -25,27 +31,29 @@ nav a {
 }
 
 nav a:hover {
-  color: blue;
+  color: #6daed3;
 }
 
 #not-home #heading-section {
   height: 200px;
-  background-image: url('../img/emp.jpg');
+  background-image: url('../img/emp3.jpg');
 }
 
 h1 {
   text-align: center;
   font-size: 3em;
+  font-weight: bold;
   padding: 76px 0;
   color: white;
-  text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+  text-shadow: 0px 0px 5px rgba(0,0,0,.8);
 }
 
 /* main content section */
 
 main {
   clear: both;
-  background: rgb(211, 211, 211);
+  background: rgba(0,0,0,.05);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,.2);
   width: 100%;
   max-width: 900px;
   height: auto;
@@ -56,10 +64,13 @@ main {
 
 h2 {
   font-size: 2em;
+  font-weight: bold;
+  color: #4e93bb;
 }
   
 h3 {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 /* activity styling */
@@ -74,17 +85,23 @@ h3 {
   float: left;
   width: 480px;
   height: 300px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.2);
 }
 
 .activity-container .activity-info {
   box-sizing: border-box;
   width: 300px;
+  height: 300px;
   float: right;
-  padding: 15px 0 15px 60px;
+  padding: 0 0 15px 60px;
 }
 
 .activity-container .activity-info p {
-  text-align: left;
+  margin-bottom: 1em;
+}
+
+.activity-container .activity-info .button {
+  margin-right: 10px;
 }
 
 /* footer */
@@ -95,4 +112,20 @@ footer {
 
 #to-top {
   float: left;
+}
+
+/* other styles */
+
+.button {
+  border: none;
+  padding: 5px 15px;
+  color: white;
+  background: #D54530;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: rgb(187, 61, 41);
 }
