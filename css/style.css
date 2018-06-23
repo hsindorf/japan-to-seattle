@@ -92,6 +92,7 @@ h2 {
 h3 {
   font-size: 1.5em;
   font-weight: bold;
+  color: #D54530;
 }
 
 /* activity styling */
@@ -124,13 +125,15 @@ h3 {
 
 .activity-container .activity-info p:nth-child(2),
 .activity-container .activity-info p:nth-child(3) {
-  margin-top: .5em; 
+  margin-top: .5em;
+  font-weight: bold;
 }
 
 .activity-container .activity-info p:nth-child(5) {
   height: 140px;
   overflow: auto;
-  background: rgba(0,0,0,.05);
+  background: rgba(109, 174, 211, .1);
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.2); 
 }
 
 .map-button {
