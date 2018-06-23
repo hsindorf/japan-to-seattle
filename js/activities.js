@@ -84,6 +84,52 @@ function makeLocations() {
     'https://goo.gl/maps/nVSwoE9cQFx',
     'An over-the-top, five-napkin affair, Katsu Burger has a cult following for its quirky Japanese take on an American classic. The burgers are supersized, Instagram-friendly, exotic flavor bombs with names like “Godzilla Attack Spicy!"',
     'https://www.katsuburger.com/');
+  new Activity(7,
+    'Wa\'z',
+    prices[1],
+    types[0],
+    areas[3],
+    'img/wazFood.jpg',
+    'https://goo.gl/maps/B5H6WNRUJQ22',
+    'This traditional multi-course style features meticulously, elegantly plated dishes served in a specific sequence to honor the seasons and Japanese culture.',
+    'https://www.wazseattle.com/');
+  new Activity(8,
+    'Shiro\'s',
+    prices[3],
+    types[0],
+    areas[0],
+    'img/shiroSushi.jpg',
+    'https://goo.gl/maps/XqfdhQxqa842',
+    'At Shiro’s Sushi we bring you the freshest, best quality seafood that is available from local and international waters. Whether you are seated at our acclaimed sushi bar or at one of our restaurant tables, our chefs look forward to creating your memorable meal.',
+    'http://shiros.com/');
+  new Activity(9,
+    'Seattle Mariner\'s Stadium Tour',
+    prices[0],
+    types[1],
+    areas[3],
+    'img/ichiroStadium.jpg',
+    'https://goo.gl/maps/QaLksJBCyK42',
+    'Sweeping views of Seattle\'s downtown skyline, breathtaking sunsets over Puget Sound, combined with excellent views of game action from all angles give fans at Safeco Field an experience unequalled in Major League Baseball.',
+    'https://www.mlb.com/mariners/ballpark/tours');
+  new Activity(10,
+    'Seattle Mariner\'s Game Tickets',
+    prices[1],
+    types[1],
+    areas[3],
+    'img/marinersGame.jpg',
+    'https://goo.gl/maps/QaLksJBCyK42',
+    'Wanna catch a Mariners Game? Go here!',
+    'https://www.mlb.com/mariners/tickets');
+  new Activity(11,
+    'Snoqualmie Falls',
+    prices[0],
+    types[1],
+    areas[4],
+    'img/snoFalls.jpg',
+    'https://goo.gl/maps/JFDoxmAnxCS2',
+    'Snoqualmie Falls is one of Washington state’s most popular scenic attractions. More than 1.5 million visitors come to the Falls every year. At the falls, you will find a two-acre park, gift shop, observation deck, the Salish Lodge and the famous 270 foot waterfall.',
+    'http://www.snoqualmiefalls.com/');
+
 }
 
 makeLocations();
