@@ -44,7 +44,7 @@ function makeLocations() {
     prices[0],
     types[0],
     areas[2],
-    'img/karaageSetsuna.jpeg',
+    'img/karaageSetsuna.jpg',
     'https://goo.gl/maps/TE3vLmsS6f82',
     'description',
     'website');
