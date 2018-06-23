@@ -129,7 +129,24 @@ function makeLocations() {
     'https://goo.gl/maps/JFDoxmAnxCS2',
     'Snoqualmie Falls is one of Washington state’s most popular scenic attractions. More than 1.5 million visitors come to the Falls every year. At the falls, you will find a two-acre park, gift shop, observation deck, the Salish Lodge and the famous 270 foot waterfall.',
     'http://www.snoqualmiefalls.com/');
-
+  new Activity(11,
+    'Starbucks Reserve Roastery',
+    prices[0],
+    types[1],
+    areas[0],
+    'img/starbucksRoast.jpg',
+    'https://goo.gl/maps/sMux2ijJZs12',
+    'A place where you can experience coffee from the unroasted bean to your cup of coffee. You can watch it being roasted. You\'ll see the burlap sacks it comes in. You can watch it being loaded into the green coffee loading pit. You can buy it scooped at the coffee scoop bar. You can experience your coffee as a pour over, Siphon brewed, Clover-brewed, a shot of espresso, espresso beverages, and more.',
+    'https://www.starbucksreserve.com/');
+  new Activity(12,
+    'Seattle Premium Outlets',
+    prices[1],
+    types[3],
+    areas[4],
+    'img/outletMall.jpg',
+    'https://goo.gl/maps/X51dd4uozJP2',
+    'Popular outlet mall shopping with stores like Coach, Nike, Aldo, and Ralph Lauren.',
+    'http://www.premiumoutlets.com/outlet/seattle');    
 }
 
 makeLocations();
