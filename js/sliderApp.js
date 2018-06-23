@@ -1,7 +1,7 @@
-let sliderImages = document.querySelectorAll(".slide"),
+let sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector("#arrow-left"),
   arrowRight = document.querySelector("#arrow-right"),
-  current = 0;
+    current = 0;
 
 // Clear all images
 function reset() {
@@ -27,14 +27,14 @@ function slideRight() {
   current++;
 }
 // Left arrow click
-arrowLeft.addEventListener("click", function() {
+arrowLeft.addEventListener("click", function () {
   if (current === 0) {
     current = sliderImages.length;
   }
   slideLeft();
 });
 // Right arrow click
-arrowRight.addEventListener("click", function() {
+arrowRight.addEventListener("click", function () {
   if (current === sliderImages.length - 1) {
     current = -1;
   }
