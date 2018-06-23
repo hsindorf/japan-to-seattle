@@ -65,7 +65,7 @@ main {
 h2 {
   font-size: 2em;
   font-weight: bold;
-  color: #6daed3;
+  color: #4e93bb;
 }
   
 h3 {
@@ -93,16 +93,15 @@ h3 {
   width: 300px;
   height: 300px;
   float: right;
-  padding: 15px 0 15px 60px;
-}
-
-.activity-container .activity-info .button {
-  margin-top: 1em;
+  padding: 0 0 15px 60px;
 }
 
 .activity-container .activity-info p {
-  text-align: left;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
+}
+
+.activity-container .activity-info .button {
+  margin-right: 10px;
 }
 
 /* footer */
@@ -118,7 +117,6 @@ footer {
 /* other styles */
 
 .button {
-  background: none;
   border: none;
   padding: 5px 15px;
   color: white;
@@ -130,8 +128,4 @@ footer {
 .button:hover {
   cursor: pointer;
   background: rgb(187, 61, 41);
-}
-
-.button:active {
-  outline: none;
 }

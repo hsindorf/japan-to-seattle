@@ -92,10 +92,6 @@ function getFiltersFromStorage() {
   }
 }
 
-// store to suitcase
-function storeFavoriteToStorage() {}
-
-
 // SET EVENT LISTENERS
 
 var filterButton = document.getElementById('run-filters');
