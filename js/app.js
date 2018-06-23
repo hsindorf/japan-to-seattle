@@ -97,11 +97,24 @@ function addFavorite(event) {
 function removeFavorite(event) {
   event.preventDefault();
   Activity.favorites[event.target.id].favorite = false;
-  event.target.textContent = 'Add to favorites';
-  event.target.removeEventListener('click', removeFavorite);
-  event.target.addEventListener('click', addFavorite);
   storeFavoritesToStorage();
+  if (suitcaseContainer) {
+    animateRemoval();
+    event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode);
+  }
+  else {
+    event.target.textContent = 'Add to favorites';
+    event.target.removeEventListener('click', removeFavorite);
+    event.target.addEventListener('click', addFavorite);
+  }
 }
+
+
+// animations
+
+function animateRemoval() {};
+
+// function animateAdd() {};
 
 // LOCAL STORAGE
 

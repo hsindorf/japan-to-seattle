@@ -79,6 +79,7 @@ h3 {
   margin: 1em 0;
   width: 780px;
   height: 300px;
+  transition: .1s ease;
 }
 
 .activity-container img {
