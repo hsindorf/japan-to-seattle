@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
 body, select, button {
   font-size: 16px;
   font-family: Quicksand, sans-serif;
@@ -9,12 +7,29 @@ a {
   transition: .2s ease;
 }
 
+/* button */
+
+.button {
+  border: none;
+  padding: 5px 15px;
+  color: white;
+  background: #D54530;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: rgb(187, 61, 41);
+}
+
 /* nav styles */
 
 nav {
   height: 32px;
   background-color: #1f1f1f;
 }
+
 header nav ul,
 #footer-nav {
   float: right;
@@ -30,13 +45,19 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:active,
+.active {
   color: #6daed3;
 }
 
 #not-home #heading-section {
   height: 200px;
   background-image: url('../img/emp3.jpg');
+}
+
+h1, h2 {
+  font-family: Lora;
 }
 
 h1 {
@@ -98,11 +119,35 @@ h3 {
 }
 
 .activity-container .activity-info p {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
-.activity-container .activity-info .button {
+.activity-container .activity-info p:nth-child(2),
+.activity-container .activity-info p:nth-child(3) {
+  margin-top: .5em; 
+}
+
+.activity-container .activity-info p:nth-child(5) {
+  height: 140px;
+  overflow: auto;
+  background: rgba(0,0,0,.05);
+}
+
+.map-button {
   margin-right: 10px;
+}
+
+.map-button,
+.website-button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 115px;
+  padding: 7px 15px;
+  text-align: center;
+}
+
+.suitcase-button {
+  width: 100%;
 }
 
 /* footer */
@@ -111,22 +156,7 @@ footer {
   clear: both;
 }
 
-#to-top {
+#to-top,
+#logo {
   float: left;
-}
-
-/* other styles */
-
-.button {
-  border: none;
-  padding: 5px 15px;
-  color: white;
-  background: #D54530;
-  text-decoration: none;
-  transition: .2s ease;
-}
-
-.button:hover {
-  cursor: pointer;
-  background: rgb(187, 61, 41);
 }

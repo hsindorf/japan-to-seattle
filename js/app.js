@@ -1,3 +1,7 @@
+// gets container
+var activitiesContainer = document.getElementById('activities-container');
+var suitcaseContainer = document.getElementById('suitcase-container');
+
 // stories the filtered activities for this session (array of objects - pulled from local storage on page load, otherwise rechosen when a new filter is selected)
 var activitiesFiltered = [];
 
@@ -46,30 +50,39 @@ function renderTheList(renderWhere) {
     activityInfo.appendChild(activityMapP);
     var activityMapA = document.createElement('a');
     activityMapA.setAttribute('href', activitiesFiltered[i].maps);
-    activityMapA.setAttribute('class', 'button');
+    activityMapA.setAttribute('class', 'button map-button');
     activityMapA.setAttribute('target', '_blank');
-    activityMapA.textContent = 'Map';
+    var activityMapI = document.createElement('i');
+    activityMapI.className += 'fas fa-map-marked-alt';
+    activityMapA.textContent += ' Map';
+    activityMapA.prepend(activityMapI);
     activityMapP.appendChild(activityMapA);
     // website
     var activityWebsiteA = document.createElement('a');
     activityWebsiteA.setAttribute('href', activitiesFiltered[i].website);
-    activityWebsiteA.setAttribute('class', 'button');
+    activityWebsiteA.setAttribute('class', 'button website-button');
     activityWebsiteA.setAttribute('target', '_blank');
-    activityWebsiteA.textContent = 'Website';
+    var activityWebsiteI = document.createElement('i');
+    activityWebsiteI.className += 'fas fa-globe';
+    activityWebsiteA.textContent += ' Website';
+    activityWebsiteA.prepend(activityWebsiteI);
     activityMapP.appendChild(activityWebsiteA);
     // add/remove my list
     var activityFavoriteP = document.createElement('p');
     activityInfo.appendChild(activityFavoriteP);
     var activityFavoriteB = document.createElement('button');
     activityFavoriteB.setAttribute('id', activitiesFiltered[i].id);
-    activityFavoriteB.setAttribute('class', 'button');
+    activityFavoriteB.setAttribute('class', 'button suitcase-button');
     if (Activity.favorites[activitiesFiltered[i].id].favorite) {
-      activityFavoriteB.textContent = 'Remove from favorites';
+      activityFavoriteB.textContent = ' Remove from Suitcase';
       activityFavoriteB.addEventListener('click', removeFavorite);
     } else {
-      activityFavoriteB.textContent = 'Add to favorites';
+      activityFavoriteB.textContent = ' Add to Suitcase';
       activityFavoriteB.addEventListener('click', addFavorite);
     }
+    var activityFavoriteI = document.createElement('i');
+    activityFavoriteI.className += 'fas fa-suitcase';
+    activityFavoriteB.prepend(activityFavoriteI);
     activityFavoriteP.appendChild(activityFavoriteB);
   }
 }
@@ -88,7 +101,10 @@ function removeActivitiesFromPage() {
 function addFavorite(event) {
   event.preventDefault();
   Activity.favorites[event.target.id].favorite = true;
-  event.target.textContent = 'Remove from Favorites';
+  event.target.textContent = ' Remove from Favorites';
+  var activityFavoriteI = document.createElement('i');
+  activityFavoriteI.className += 'fas fa-suitcase';
+  event.target.prepend(activityFavoriteI);
   event.target.removeEventListener('click', addFavorite);
   event.target.addEventListener('click', removeFavorite);
   storeFavoritesToStorage();
@@ -103,7 +119,10 @@ function removeFavorite(event) {
     event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode);
   }
   else {
-    event.target.textContent = 'Add to favorites';
+    event.target.textContent = ' Add to favorites';
+    var activityFavoriteI = document.createElement('i');
+    activityFavoriteI.className += 'fas fa-suitcase';
+    event.target.prepend(activityFavoriteI);
     event.target.removeEventListener('click', removeFavorite);
     event.target.addEventListener('click', addFavorite);
   }
