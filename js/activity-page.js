@@ -1,7 +1,3 @@
-// VARIABLES
-
-// gets container
-var activitiesContainer = document.getElementById('activities-container');
 // stores active filters
 var activeFilters = [null, null, null];
 // gets filter form
