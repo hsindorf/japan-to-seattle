@@ -147,6 +147,27 @@ function makeLocations() {
     'https://goo.gl/maps/X51dd4uozJP2',
     'Popular outlet mall shopping with stores like Coach, Nike, Aldo, and Ralph Lauren.',
     'http://www.premiumoutlets.com/outlet/seattle');    
+  new Activity(13,
+    'Seattle Helicopter Tours',
+    prices[1],
+    types[3],
+    areas[4],
+    'img/helicopterTour.jpg',
+    'https://goo.gl/maps/pzNReP8oxR82',
+    'In a helicopter, you can rise above. Come face to face with iconic Mt. Rainier, soar past the bustling downtown waterfront, snap a perfect shot of the Space Needle, get a birds-eye view of beautiful Lake Washington, and experience the power of Snoqualmie Falls while hovering at the water\'s edge.',
+    'https://www.seattlehelitours.net/');    
+  new Activity(14,
+    'Alki Beach',
+    prices[0],
+    types[1],
+    areas[4],
+    'img/alkiBeach.jpg',
+    'https://goo.gl/maps/LvezgJW61372',
+    'Picture a perfect summer day, and chances are your thoughts will take you to Alki Beach Park, a long beach strip that runs from Alki Point to Duwamish Head on Elliott Bay. It\'s a great spot for a 2.5 mile walk any time of year, and in the summer draws joggers, rollerbladers, volleyball players, beachcombers, sunbathers, bicyclists and strollers out to enjoy the sun.',
+    'https://www.seattle.gov/parks/find/parks/alki-beach-park');   
+
+
+
 }
 
 makeLocations();
