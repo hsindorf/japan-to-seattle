@@ -164,9 +164,25 @@ function makeLocations() {
     'img/alkiBeach.jpg',
     'https://goo.gl/maps/LvezgJW61372',
     'Picture a perfect summer day, and chances are your thoughts will take you to Alki Beach Park, a long beach strip that runs from Alki Point to Duwamish Head on Elliott Bay. It\'s a great spot for a 2.5 mile walk any time of year, and in the summer draws joggers, rollerbladers, volleyball players, beachcombers, sunbathers, bicyclists and strollers out to enjoy the sun.',
-    'https://www.seattle.gov/parks/find/parks/alki-beach-park');   
-
-
+    'https://www.seattle.gov/parks/find/parks/alki-beach-park');
+  new Activity(15,
+    'Columbia Center View',
+    prices[0],
+    types[1],
+    areas[3],
+    'img/towerView.jpg',
+    'https://goo.gl/maps/F9Rhg6pTKz92',
+    'Seattle local\'s choice for best view of the city',
+    'https://columbiacenterseattle.com/');
+  new Activity(16,
+    'Seattle Seaplane Tours',
+    prices[1],
+    types[1],
+    areas[1],
+    'img/seaPlane.jpg',
+    'https://goo.gl/maps/F9Rhg6pTKz92',
+    'Amazing seaplane tours out of Lake Union for an amazing price!',
+    'https://www.kenmoreair.com/scenic-flights/Seattle-Scenic-Tour/');
 
 }
 
