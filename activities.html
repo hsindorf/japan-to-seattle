@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:700|Quicksand:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Activities</title>
+  <title>Seattle Yokoso | Activities</title>
 </head>
 <body id="not-home">
   <header>
@@ -28,18 +28,23 @@
     </div>
   </header>
   <main>
-    <h2>Cool Info about the thing</h2>
     <p>Instructions about the page here</p>
     <h2>Select Your Filters</h2>
     <form id="select-filters">
-      <label for="price">Price (USD)</label>
-      <select name="price" id="select-price"></select>
-      <label for="type">Type of Activity</label>
-      <select name="type" id="select-type"></select>
-      <label for="area">Area of Seattle</label>
-      <select name="area" id="select-area"></select>
-      <button name="filter" id="run-filters" class="button">Filter</button>
-      <button name="clear-filters" id="clear-filters" class="button">Clear Filters</button>
+      <div class="left">
+        <p><label for="price">Price (USD)</label></p><br />
+        <p><label for="type">Type of Activity</label></p><br />
+        <p><label for="area">Area of Seattle</label></p>
+      </div>
+      <div class="right">
+        <select name="price" id="select-price"></select><br />
+        <select name="type" id="select-type"></select><br />
+        <select name="area" id="select-area"></select>
+      </div>
+      <div class="buttons">
+        <button name="filter" id="run-filters" class="button"><i class="fas fa-filter"></i> Filter</button>
+        <button name="clear-filters" id="clear-filters" class="button"><i class="fas fa-ban "></i> Clear Filters</button>
+      </div>
     </form>
     <h2>List of Activities</h2>
     <section id="activities-container"></section>
@@ -50,11 +55,11 @@
               <li><a href="#not-home">To Top</a></li>
           </ul>
           <ul id="footer-nav">
+            <li><a href="about-us.html"><i class="fas fa-user"></i> About Us</a></li>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="activities.html" class="active"><i class="fas fa-camera"></i> Activities</a></li>
             <li><a href="my-suitcase.html"><i class="fas fa-suitcase"></i> My Suitcase</a></li>
             <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
-            <li><a href="about-us.html"><i class="fas fa-user"></i> About Us</a></li>
           </ul>
         </nav>
   </footer>
