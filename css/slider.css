@@ -1,4 +1,4 @@
-body,
+/* body,
 #slider,
 .wrap,
 .slide-content {
@@ -21,17 +21,18 @@ body,
 }
 
 .slide1 {
-  opacity:0.80; 
+  opacity:0.90; 
   background-image: url("https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg");
 }
 .slide2 {
-  opacity:0.80; 
+  opacity:0.90; 
   background-image: url("https://images.pexels.com/photos/371393/pexels-photo-371393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 .slide3 {
-  opacity:0.80; 
+  opacity:0.90; 
   background-image: url("https://images.pexels.com/photos/136397/pexels-photo-136397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
+
 
 .slide-content {
   display: flex;
@@ -70,22 +71,154 @@ body,
   margin-right: 30px;
 }
 
+h1 {
+  opacity: 1;
+  color: black;
+}
+#sushi {
+  float: center;
+  height: 100px;
+  opacity: 1;
+}
+p {
+  padding: 50px;
+  opacity: 1;
+  color:black;
+  font-size: 30px;
+}
 .box {
   opacity: 0.5;
   background-color: white;
   width: 800px;
   height: 500px;
 }
-h1,
-#text {
-  opacity: 1;
-  color: black;
+
+ */
+* {
+  margin:0;
+  padding:0;
+  font-family: Arial, sans-serif;
 }
 
-body {
-  background-image: url("https://data.tokyogirlsupdate.com/wp/wp-content/uploads/2017/06/funassy.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  opacity: 1.0;
+#slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-  
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: slideAnimation 16s infinite 0s;
+  overflow: hidden;
+}
+.slide:nth-child(2) {
+  animation-delay: 8s;
+}
+.bg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.pexels.com/photos/371393/pexels-photo-371393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
+  animation: BgAnimation 16s infinite 0s;
+}
+.slide:nth-child(2) .bg {
+background-image: url('https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+animation: BgAnimation2 16s infinite 8s;
+}
+.bg::after {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://image.freepik.com/free-vector/sashiko-seamless-indigo-dye-pattern-with-traditional-white-japanese-embroidery_1235-212.jpg');
+  opacity:0.1;
+}
+.contentWrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 900;
+  text-shadow: 0 0 5px rgb(0, 0, 0.7);
+  font-size: 120px;
+  text-transform: uppercase;
+  padding: 0;
+}
+p {
+  font-size: 1.1em;
+  position: relative;
+}
+p::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+p span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: #fff;
+}
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;;
+  }
+}
+
+@keyframes BgAnimation {
+  0% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+60% {
+    transform: translate(-45%, -55%) scale(1.1);
+  }
+100% {
+  transform: translate(-45%, -55%) scale(1.1);
+  }
+}
+
+@keyframes BgAnimation2 {
+  0% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+60% {
+    transform: translate(-55%, -45%) scale(1.1);
+  }
+100% {
+  transform: translate(-50%, -50%) scale(1.1);
+  }
+}
