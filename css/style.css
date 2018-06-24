@@ -88,10 +88,9 @@ main {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   color: #4074c7;
-  text-align: center;
   margin: .5em auto;
 }
   
@@ -99,6 +98,10 @@ h3 {
   font-size: 1.5em;
   font-weight: bold;
   color: #ec4d36;
+}
+
+.page-content {
+  padding: 0 2em;
 }
 
 /* filter styling */
