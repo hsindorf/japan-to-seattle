@@ -35,7 +35,7 @@ function renderTheList(renderWhere) {
     activityInfo.appendChild(activityPrice);
     // type
     var activityType = document.createElement('p');
-    activityType.textContent = activitiesFiltered[i].type;
+    activityType.textContent = 'Type: ' + activitiesFiltered[i].type;
     activityInfo.appendChild(activityType);
     // location
     var activityArea = document.createElement('p');
@@ -52,20 +52,16 @@ function renderTheList(renderWhere) {
     activityMapA.setAttribute('href', activitiesFiltered[i].maps);
     activityMapA.setAttribute('class', 'button map-button');
     activityMapA.setAttribute('target', '_blank');
-    var activityMapI = document.createElement('i');
-    activityMapI.className += 'fas fa-map-marked-alt';
     activityMapA.textContent += ' Map';
-    activityMapA.prepend(activityMapI);
+    makeIcon('fas fa-map-marked-alt', activityMapA);
     activityMapP.appendChild(activityMapA);
     // website
     var activityWebsiteA = document.createElement('a');
     activityWebsiteA.setAttribute('href', activitiesFiltered[i].website);
     activityWebsiteA.setAttribute('class', 'button website-button');
     activityWebsiteA.setAttribute('target', '_blank');
-    var activityWebsiteI = document.createElement('i');
-    activityWebsiteI.className += 'fas fa-globe';
     activityWebsiteA.textContent += ' Website';
-    activityWebsiteA.prepend(activityWebsiteI);
+    makeIcon('fas fa-globe', activityWebsiteA);
     activityMapP.appendChild(activityWebsiteA);
     // add/remove my list
     var activityFavoriteP = document.createElement('p');
@@ -80,9 +76,7 @@ function renderTheList(renderWhere) {
       activityFavoriteB.textContent = ' Add to Suitcase';
       activityFavoriteB.addEventListener('click', addFavorite);
     }
-    var activityFavoriteI = document.createElement('i');
-    activityFavoriteI.className += 'fas fa-suitcase';
-    activityFavoriteB.prepend(activityFavoriteI);
+    makeIcon('fas fa-suitcase', activityFavoriteB);
     activityFavoriteP.appendChild(activityFavoriteB);
   }
 }
@@ -101,10 +95,8 @@ function removeActivitiesFromPage() {
 function addFavorite(event) {
   event.preventDefault();
   Activity.favorites[event.target.id].favorite = true;
-  event.target.textContent = ' Remove from Favorites';
-  var activityFavoriteI = document.createElement('i');
-  activityFavoriteI.className += 'fas fa-suitcase';
-  event.target.prepend(activityFavoriteI);
+  event.target.textContent = ' Remove from Suitcase';
+  makeIcon('fas fa-suitcase', event.target);
   event.target.removeEventListener('click', addFavorite);
   event.target.addEventListener('click', removeFavorite);
   storeFavoritesToStorage();
@@ -119,10 +111,8 @@ function removeFavorite(event) {
     event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode);
   }
   else {
-    event.target.textContent = ' Add to favorites';
-    var activityFavoriteI = document.createElement('i');
-    activityFavoriteI.className += 'fas fa-suitcase';
-    event.target.prepend(activityFavoriteI);
+    event.target.textContent = ' Add to Suitcase';
+    makeIcon('fas fa-suitcase', event.target);
     event.target.removeEventListener('click', removeFavorite);
     event.target.addEventListener('click', addFavorite);
   }
@@ -142,7 +132,6 @@ function storeFavoritesToStorage() {
   localStorage.setItem('activityFavorites', JSON.stringify(Activity.favorites));
 }
 
-// Activity.all
 function getFavoritesFromStorage() {
   if (localStorage.getItem('activityFavorites')) {
     Activity.favorites = JSON.parse(localStorage.getItem('activityFavorites'));
@@ -154,4 +143,13 @@ function getFavoritesFromStorage() {
   } else {
     Activity.favorites = Activity.all;
   }
+}
+
+//make an icon
+
+function makeIcon(whatIcon, whereToPut) {
+  var icon = document.createElement('i');
+  icon.className = whatIcon;
+  var where = whereToPut;
+  whereToPut.prepend(icon);
 }

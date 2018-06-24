@@ -87,12 +87,50 @@ h2 {
   font-size: 2em;
   font-weight: bold;
   color: #4e93bb;
+  text-align: center;
+  margin: .5em auto;
 }
   
 h3 {
   font-size: 1.5em;
   font-weight: bold;
   color: #D54530;
+}
+
+/* filter styling */
+
+#select-filters {
+  width: 500px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+#select-filters p {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: .6em;
+}
+
+#select-filters select {
+  margin: .5em;
+  padding: .5em;
+}
+
+#select-filters .left {
+  text-align: right;
+  float: left;
+  width: 200px; 
+}
+
+#select-filters .right {
+  width: 300px;
+  float:right;
+}
+
+#select-filters .buttons {
+  clear: both;
+  text-align: center;
+  padding: 2em 0 1em 0;
 }
 
 /* activity styling */
@@ -130,7 +168,7 @@ h3 {
 }
 
 .activity-container .activity-info p:nth-child(5) {
-  height: 140px;
+  height: 120px;
   overflow: auto;
   background: rgba(109, 174, 211, .1);
   box-shadow: 1px 1px 5px 1px rgba(0,0,0,.2); 
