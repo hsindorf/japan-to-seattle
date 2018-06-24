@@ -115,6 +115,7 @@ p {
   width: 100%;
   height: 100%;
   animation: slideAnimation 16s infinite 0s;
+  overflow: hidden;
 }
 .slide:nth-child(2) {
   animation-delay: 8s;
@@ -127,12 +128,11 @@ p {
   width: 100%;
   height: 100%;
   background: url('https://images.pexels.com/photos/371393/pexels-photo-371393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
-  background-size: cover;
   animation: BgAnimation 16s infinite 0s;
 }
 .slide:nth-child(2) .bg {
 background-image: url('https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-animation-delay: 8s;
+animation: BgAnimation2 16s infinite 8s;
 }
 .bg::after {
   content:'';
@@ -144,19 +144,43 @@ animation-delay: 8s;
   background: url('https://image.freepik.com/free-vector/sashiko-seamless-indigo-dye-pattern-with-traditional-white-japanese-embroidery_1235-212.jpg');
   opacity:0.1;
 }
-h1 {
+.contentWrapper {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   text-align: center;
+}
+
+h1 {
   color: #fff;
   font-weight: 900;
   text-shadow: 0 0 5px rgb(0, 0, 0.7);
   font-size: 120px;
   text-transform: uppercase;
+  padding: 0;
 }
-
+p {
+  font-size: 1.1em;
+  position: relative;
+}
+p::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+p span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: #fff;
+}
 @keyframes slideAnimation {
   0% {
     opacity: 0;
@@ -184,5 +208,17 @@ h1 {
   }
 100% {
   transform: translate(-45%, -55%) scale(1.1);
+  }
 }
+
+@keyframes BgAnimation2 {
+  0% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+60% {
+    transform: translate(-55%, -45%) scale(1.1);
+  }
+100% {
+  transform: translate(-50%, -50%) scale(1.1);
+  }
 }
