@@ -255,7 +255,15 @@ function makeLocations() {
     'https://goo.gl/maps/h6ytjQCxypB2',
     'Calling all lovers of America’s distinctive natural landscapes, this private 10-hour excursion to Mt. Ranier National Park is for you. Departing Seattle, you’ll explore the Paradise area of the park, home to the Jackson Visitor Center and Reflection Lake. Plus, you’ll marvel at Narada Falls — taller than Niagara Falls — and enjoy a picnic lunch at an optimum vantage point. Hotel pickup and drop-off in Seattle are included.',
     'https://www.viator.com/tours/Seattle/Private-Tour-Mt-Rainier-Day-Trip-from-Seattle/d704-3657PRVTRAINIER');
-
+  new Activity(25,
+    'Private Shopping Pacific Place',
+    prices[3],
+    types[2],
+    areas[2],
+    'img/pacificPlaceShopping.jpg',
+    'https://goo.gl/maps/XwqLHDd6dEJ2',
+    'Pacific Place is an upscale shopping center located in downtown Seattle, WA on Sixth Avenue and Pine Street. It includes a skybridge that connects it to Seattle\'s Nordstrom',
+    'http://www.pacificplaceseattle.com/');
 
 }
 
