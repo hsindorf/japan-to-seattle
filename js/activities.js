@@ -238,7 +238,7 @@ function makeLocations() {
     'The Seattle Great Wheel is a giant Ferris wheel at Pier 57 on Elliott Bay in Seattle, Washington. With an overall height of 175 feet, it was the tallest Ferris wheel on the West Coast of the United States when it opened on June 29, 2012.',
     'https://seattlegreatwheel.com/');
   new Activity(23,
-    'Pacific Northwest Peaks and Pours Tour',
+    'PNW Peaks and Pours Tour',
     prices[3],
     types[1],
     areas[4],
@@ -247,7 +247,7 @@ function makeLocations() {
     'Pacific Northwest Peaks & Pours tour is a craft beer enthusiasts dream come true. The 8-day excursion winds its way from Seattle to Portland, Ashland and Bend, with behind-the-scenes tours and tastings as some of the countries most coveted breweries. Along the way we will experiences the iconic sites of the region and make sure you have plenty of down time to enjoy exploring on your own.',
     'https://www.lonelyplanet.com/usa/tours/pacific-northwest-peaks-pours/a/pa-tou/v-54610P6/362096');
   new Activity(24,
-    'Private Mt Rainier National Park Day Trip from Seattle',
+    'Private Mt. Rainier Day Trip',
     prices[3],
     types[1],
     areas[4],
