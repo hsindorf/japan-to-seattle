@@ -34,7 +34,7 @@
   animation: BgAnimation 16s infinite 0s;
 }
 .slide:nth-child(2) .bg {
-background-image: url('../img/slider-city.jpeg');
+background-image: url('../img/photo-1437809781432-a957377661ee.jpeg');
 animation: BgAnimation2 16s infinite 8s;
 }
 .bg::after {
