@@ -150,6 +150,5 @@ function getFavoritesFromStorage() {
 function makeIcon(whatIcon, whereToPut) {
   var icon = document.createElement('i');
   icon.className = whatIcon;
-  var where = whereToPut;
   whereToPut.prepend(icon);
 }

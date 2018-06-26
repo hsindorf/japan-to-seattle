@@ -1,0 +1,62 @@
+.accordion section,
+.accordion h2,
+.accordion h2 a,
+.accordion-content {
+  transition: all 1s ease;
+}
+
+.accordion-content a {
+  transition: all .5s ease;
+}
+
+.accordion section {
+  height: 5em;
+  overflow: hidden;
+  background: grey;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.accordion h2 {
+  box-sizing: border-box;
+  padding: 1em;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.accordion h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.accordion-content {
+  padding: 2em;
+  height: 10.4em;
+  opacity: 0;
+  overflow: auto;
+}
+
+.accordion section:target {
+  height: 18.9em;
+}
+
+.accordion section:target h2 {
+  border-bottom: none;
+}
+
+.accordion section:target i {
+  transform: rotate(.25turn);
+}
+
+.accordion section:target .accordion-content a {
+  color: #ec4d36;
+}
+
+.accordion section:target .accordion-content a:hover {
+  color: black;
+}
+
+.accordion section:target .accordion-content {
+  background-color: rgba(0,0,0,.1);
+  opacity: 1;
+}

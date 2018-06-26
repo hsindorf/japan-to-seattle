@@ -4,6 +4,11 @@ body, select, button {
   background-color: #1f1f1f;
 }
 
+select, button {
+  font-size: 16px;
+  font-family: Quicksand, sans-serif;
+}
+
 a {
   transition: .2s ease;
 }
