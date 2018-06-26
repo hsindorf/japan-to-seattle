@@ -132,7 +132,7 @@ function makeLocations() {
   new Activity(11,
     'Starbucks Reserve Roastery',
     prices[0],
-    types[1],
+    types[2],
     areas[0],
     'img/starbucksRoast.jpg',
     'https://goo.gl/maps/sMux2ijJZs12',
@@ -141,7 +141,7 @@ function makeLocations() {
   new Activity(12,
     'Seattle Premium Outlets',
     prices[1],
-    types[3],
+    types[2],
     areas[4],
     'img/outletMall.jpg',
     'https://goo.gl/maps/X51dd4uozJP2',
@@ -264,7 +264,15 @@ function makeLocations() {
     'https://goo.gl/maps/XwqLHDd6dEJ2',
     'Pacific Place is an upscale shopping center located in downtown Seattle, WA on Sixth Avenue and Pine Street. It includes a skybridge that connects it to Seattle\'s Nordstrom',
     'http://www.pacificplaceseattle.com/');
-
+  new Activity(26,
+    'Orca Watching Seaplane Tour',
+    prices[2],
+    types[1],
+    areas[4],
+    'img/orcaTour.jpg',
+    'https://goo.gl/maps/m1SEgj1cQbF2',
+    'The spectacular natural beauty and relaxed rural lifestyle of the San Juan Islands feels like a world away… yet this unique Whale Watching seaplane flight and cruise is just a day-trip away from Seattle with Kenmore Air.',
+    'https://www.kenmoreair.com/experiences/Whale-Watching-San-Juan-Islands/');
 }
 
 makeLocations();
