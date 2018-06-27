@@ -1,5 +1,6 @@
 body {
   background-color: #333333;
+  background-image: url('../img/slider-texture.png');
   color: white;
 }
 
@@ -24,14 +25,16 @@ a:hover {
   border: none;
   padding: 5px 15px;
   color: white;
-  background: #e62031;
+  background: #f52436;
   text-decoration: none;
   transition: .2s ease;
+  border-radius: 5px;
 }
 
 .button:hover {
   cursor: pointer;
-  background: #a51723;
+  background: #c41d2b;
+  text-decoration: none;
 }
 
 /* nav styles */
@@ -63,7 +66,7 @@ nav a {
 nav a:hover,
 nav a:active,
 .active {
-  color: #e62031;
+  color: #f52436;
   text-decoration: none;
 }
 
@@ -94,7 +97,7 @@ h1 {
 main {
   clear: both;
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   height: auto;
   box-sizing: border-box;
   margin: 0 auto;
@@ -111,37 +114,39 @@ h2 {
 h3 {
   font-size: 1.5em;
   font-weight: bold;
-  color: #e62031;
+  color: #8ac2ce;
 }
 
 /* filter styling */
 
-#select-filters {
-  width: 500px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-#select-filters p {
+#select-filters label {
   font-weight: bold;
   font-size: 1.2em;
-  padding: .6em;
 }
 
 #select-filters select {
-  margin: .5em;
   padding: .5em;
-}
-
-#select-filters .left {
-  text-align: right;
-  float: left;
-  width: 200px; 
-}
-
-#select-filters .right {
+  box-sizing: border-box;
   width: 300px;
-  float:right;
+  margin-top: 20px;
+}
+
+.filter-section {
+  width: 300px;
+  display: inline-block;
+  margin: 20px 20px 0 0;
+}
+
+.filter-section:nth-child(1) {
+  float: left;
+}
+
+.filter-section:nth-child(2) {
+  float: right;
+}
+
+.filter-section:nth-child(3) {
+  float: right;
 }
 
 #select-filters .buttons {
@@ -154,9 +159,12 @@ h3 {
 
 .activity-container {
   margin: 1em auto;
-  width: 780px;
+  width: 900px;
   height: 300px;
   transition: .1s ease;
+  padding: 30px;
+  background: rgba(255,255,255,.2);
+  border-radius: 15px;
 }
 
 .activity-container img {
@@ -168,7 +176,7 @@ h3 {
 
 .activity-container .activity-info {
   box-sizing: border-box;
-  width: 300px;
+  width: 390px;
   height: 300px;
   float: right;
   padding: 0 0 15px 60px;
@@ -197,7 +205,7 @@ h3 {
 .website-button {
   display: inline-block;
   box-sizing: border-box;
-  width: 115px;
+  width: 160px;
   padding: 7px 15px;
   text-align: center;
   font-weight: 400;

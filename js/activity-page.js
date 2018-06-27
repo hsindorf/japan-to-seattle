@@ -31,7 +31,7 @@ function runFilters() {
   if (activitiesFiltered.length === 0) {
     activitiesContainer.textContent = '';
     var pEl = document.createElement('p');
-    pEl.textContent = 'Nothing found!';
+    pEl.textContent = 'No activities found! Try different filters.';
     activitiesContainer.appendChild(pEl);
   } else {
     activitiesContainer.textContent = '';
