@@ -2,19 +2,15 @@
 .accordion h2,
 .accordion h2 a,
 .accordion-content {
-  transition: all 1s ease;
-}
-
-.accordion-content a {
   transition: all .5s ease;
 }
 
 .accordion section {
+  margin-top: 1em;
   height: 5em;
   overflow: hidden;
-  background: grey;
-  border: 1px solid white;
-  border-radius: 15px;
+  background: #ec4d36;
+  border-radius:15px;
 }
 
 .accordion h2 {
@@ -29,34 +25,36 @@
   color: white;
 }
 
+.accordion h2:hover {
+  cursor: pointer;
+}
+
 .accordion-content {
   padding: 2em;
   height: 10.4em;
   opacity: 0;
   overflow: auto;
+  color: #bd3e2b;
+  background-color: rgba(0,0,0,.2);
 }
 
-.accordion section:target {
+.accordion-content a {
+  color: #bd3e2b;
+}
+
+.accordion .active-accordion {
   height: 18.9em;
 }
 
-.accordion section:target h2 {
-  border-bottom: none;
-}
-
-.accordion section:target i {
+.accordion .active-accordion i {
   transform: rotate(.25turn);
 }
 
-.accordion section:target .accordion-content a {
-  color: #ec4d36;
-}
-
-.accordion section:target .accordion-content a:hover {
+.accordion .active-accordion .accordion-content {
+  opacity: 1;
   color: black;
 }
 
-.accordion section:target .accordion-content {
-  background-color: rgba(0,0,0,.1);
-  opacity: 1;
+.accordion .active-accordion a {
+  color: white;
 }
