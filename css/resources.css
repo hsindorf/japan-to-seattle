@@ -52,7 +52,7 @@
 
 .accordion .active-accordion .accordion-content {
   opacity: 1;
-  color: black;
+  color: rgb(243, 194, 194);
 }
 
 .accordion .active-accordion a {
