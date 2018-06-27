@@ -9,7 +9,7 @@
   margin-top: 1em;
   height: 5em;
   overflow: hidden;
-  background: #ec4d36;
+  background: #f52436;
   border-radius:15px;
 }
 
@@ -34,12 +34,12 @@
   height: 10.4em;
   opacity: 0;
   overflow: auto;
-  color: #bd3e2b;
+  color: #c41d2b;
   background-color: rgba(0,0,0,.2);
 }
 
 .accordion-content a {
-  color: #bd3e2b;
+  color: #c41d2b;
 }
 
 .accordion .active-accordion {

@@ -32,14 +32,16 @@
     <p class="page-content">Instructions about the page here</p>
     <h2>Select Your Filters</h2>
     <form id="select-filters">
-      <div class="left">
-        <p><label for="price">Price (USD)</label></p><br />
-        <p><label for="type">Type of Activity</label></p><br />
-        <p><label for="area">Area of Seattle</label></p>
+      <div class="filter-section">
+        <label for="price">Price (USD)</label><br />
+        <select name="price" id="select-price"></select>
       </div>
-      <div class="right">
-        <select name="price" id="select-price"></select><br />
-        <select name="type" id="select-type"></select><br />
+      <div class="filter-section">
+        <label for="type">Type of Activity</label><br />
+        <select name="type" id="select-type"></select>
+      </div>
+      <div class="filter-section">
+        <label for="area">Area of Seattle</label><br />
         <select name="area" id="select-area"></select>
       </div>
       <div class="buttons">
