@@ -34,7 +34,7 @@
   animation: BgAnimation 16s infinite 0s;
 }
 .slide:nth-child(2) .bg {
-background-image: url('../img/photo-1437809781432-a957377661ee.jpeg');
+background-image: url('../img/nightsky.jpeg');
 animation: BgAnimation2 16s infinite 8s;
 }
 .bg::after {
@@ -44,8 +44,8 @@ animation: BgAnimation2 16s infinite 8s;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/slider-texture.jpg');
-  opacity:0.1;
+  background: url('../img/slider-texture_0.png');
+  opacity:0.8;
 }
 .contentWrapper {
   position: absolute;
