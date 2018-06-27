@@ -5,6 +5,8 @@
   transition: all .5s ease;
 }
 
+/* inactive/base */
+
 .accordion section {
   margin-top: 1em;
   height: 5em;
@@ -31,7 +33,7 @@
 
 .accordion-content {
   padding: 2em;
-  height: 10.4em;
+  height: 14.4em;
   opacity: 0;
   overflow: auto;
   color: #c41d2b;
@@ -42,8 +44,10 @@
   color: #c41d2b;
 }
 
+/* active */
+
 .accordion .active-accordion {
-  height: 18.9em;
+  height: 22.9em;
 }
 
 .accordion .active-accordion i {
@@ -52,9 +56,24 @@
 
 .accordion .active-accordion .accordion-content {
   opacity: 1;
-  color: rgb(243, 194, 194);
+  color: white;
 }
 
 .accordion .active-accordion a {
+  color: #8ac2ce;
+}
+
+.accordion .active-accordion a:hover {
+  color: black;
+}
+
+/* other styles */
+
+p {
+  margin-bottom: .5em;
+}
+
+h3 {
+  margin: .5em 0;
   color: white;
 }

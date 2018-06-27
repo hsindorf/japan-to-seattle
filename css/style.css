@@ -11,12 +11,13 @@ body, select, button {
 
 a {
   transition: .2s ease;
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none; 
+  color: #8ac2ce;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: black;
 }
 
 /* button */
@@ -33,6 +34,7 @@ a:hover {
 
 .button:hover {
   cursor: pointer;
+  color: white;
   background: #c41d2b;
   text-decoration: none;
 }
@@ -92,6 +94,14 @@ h1 {
   text-shadow: 0px 0px 15px rgba(0,0,0,.8);
 }
 
+h2 {
+  clear: both;
+}
+
+h2:nth-child(2) {
+  padding-top: 60px;
+}
+
 /* main content section */
 
 main {
@@ -115,6 +125,7 @@ h3 {
   font-size: 1.5em;
   font-weight: bold;
   color: #8ac2ce;
+  text-shadow: 0px 0px 3px rgba(0,0,0,.6);
 }
 
 /* filter styling */
@@ -134,7 +145,7 @@ h3 {
 .filter-section {
   width: 300px;
   display: inline-block;
-  margin: 20px 20px 0 0;
+  margin: 20px 30px 0 0;
 }
 
 .filter-section:nth-child(1) {
@@ -142,11 +153,12 @@ h3 {
 }
 
 .filter-section:nth-child(2) {
-  float: right;
+  float: left;
 }
 
 .filter-section:nth-child(3) {
   float: right;
+  margin-right: 0;
 }
 
 #select-filters .buttons {
@@ -224,4 +236,55 @@ footer {
 #to-top,
 #logo {
   float: left;
+}
+
+/* ichiroe */
+
+.ichiroe-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.ichiroe {
+  float: left;
+  width: 250px;
+  height: 250px;
+}
+
+.ichiroe-container a {
+  color: #f52436;
+}
+
+.ichiroe-container a:hover {
+  color: black;
+}
+
+.speech-bubble {
+  float: right;
+  position: relative;
+  color: black;
+  background: rgba(255,255,255,.7);
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 2em;
+  font-weight: 700;
+  border-radius: 50px;
+  height: 190px;
+  margin: 0 auto 60px auto;
+  width: 500px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: rgba(255,255,255,.7);
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -20px;
 }
