@@ -1,5 +1,5 @@
 # Seattle Yokoso 
-Code Fellows 201 Final Project 
+Code Fellows 201 Final Project. This website is a tourism resource guide for Japanese tourists to Seattle. Visitors can view and filter a list of tourist activities available around Seattle, and save them for later viewing. There is also a list of information for other emergency/transportation resources around Seattle.
 
 ## Collaborators 
 - Tanya Wickham 
