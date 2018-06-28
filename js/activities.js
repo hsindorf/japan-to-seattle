@@ -129,7 +129,7 @@ function makeLocations() {
     'https://goo.gl/maps/JFDoxmAnxCS2',
     'Snoqualmie Falls is one of Washington state’s most popular scenic attractions. More than 1.5 million visitors come to the Falls every year. At the falls, you will find a two-acre park, gift shop, observation deck, the Salish Lodge and the famous 270 foot waterfall.',
     'http://www.snoqualmiefalls.com/');
-  new Activity(11,
+  new Activity(12,
     'Starbucks Reserve Roastery',
     prices[0],
     types[2],
@@ -138,7 +138,7 @@ function makeLocations() {
     'https://goo.gl/maps/sMux2ijJZs12',
     'A place where you can experience coffee from the unroasted bean to your cup of coffee. You can watch it being roasted. You\'ll see the burlap sacks it comes in. You can watch it being loaded into the green coffee loading pit. You can buy it scooped at the coffee scoop bar. You can experience your coffee as a pour over, Siphon brewed, Clover-brewed, a shot of espresso, espresso beverages, and more.',
     'https://www.starbucksreserve.com/');
-  new Activity(12,
+  new Activity(13,
     'Seattle Premium Outlets',
     prices[1],
     types[2],
@@ -147,7 +147,7 @@ function makeLocations() {
     'https://goo.gl/maps/X51dd4uozJP2',
     'Popular outlet mall shopping with stores like Coach, Nike, Aldo, and Ralph Lauren.',
     'http://www.premiumoutlets.com/outlet/seattle');    
-  new Activity(13,
+  new Activity(14,
     'Seattle Helicopter Tours',
     prices[1],
     types[3],
@@ -156,7 +156,7 @@ function makeLocations() {
     'https://goo.gl/maps/pzNReP8oxR82',
     'In a helicopter, you can rise above. Come face to face with iconic Mt. Rainier, soar past the bustling downtown waterfront, snap a perfect shot of the Space Needle, get a birds-eye view of beautiful Lake Washington, and experience the power of Snoqualmie Falls while hovering at the water\'s edge.',
     'https://www.seattlehelitours.net/');    
-  new Activity(14,
+  new Activity(15,
     'Alki Beach',
     prices[0],
     types[1],
@@ -165,7 +165,7 @@ function makeLocations() {
     'https://goo.gl/maps/LvezgJW61372',
     'Picture a perfect summer day, and chances are your thoughts will take you to Alki Beach Park, a long beach strip that runs from Alki Point to Duwamish Head on Elliott Bay. It\'s a great spot for a 2.5 mile walk any time of year, and in the summer draws joggers, rollerbladers, volleyball players, beachcombers, sunbathers, bicyclists and strollers out to enjoy the sun.',
     'https://www.seattle.gov/parks/find/parks/alki-beach-park');
-  new Activity(15,
+  new Activity(16,
     'Columbia Center View',
     prices[0],
     types[1],
@@ -174,7 +174,7 @@ function makeLocations() {
     'https://goo.gl/maps/F9Rhg6pTKz92',
     'Seattle local\'s choice for best view of the city',
     'https://columbiacenterseattle.com/');
-  new Activity(16,
+  new Activity(17,
     'Seattle Seaplane Tours',
     prices[1],
     types[1],
@@ -183,7 +183,7 @@ function makeLocations() {
     'https://goo.gl/maps/F9Rhg6pTKz92',
     'Amazing seaplane tours out of Lake Union for an amazing price!',
     'https://www.kenmoreair.com/scenic-flights/Seattle-Scenic-Tour/');
-  new Activity(17,
+  new Activity(18,
     'FlintCreek Cattle Co',
     prices[2],
     types[0],
@@ -192,7 +192,7 @@ function makeLocations() {
     'https://goo.gl/maps/YiQpZ2CrHtD2',
     'Lofty, stylish New American kitchen emphasizing sustainably raised beef, plus game & cocktails.',
     'http://flintcreekseattle.com/');
-  new Activity(18,
+  new Activity(19,
     'Hitchcock Resturant',
     prices[2],
     types[0],
@@ -201,7 +201,7 @@ function makeLocations() {
     'https://goo.gl/maps/WC7HrB64TTB2',
     'Locally sourced, Euro-inspired Pacific NW fare in a small dining room with outdoor seats & takeaway.',
     'https://www.hitchcockrestaurant.com/');
-  new Activity(19,
+  new Activity(20,
     'JuneBaby',
     prices[1],
     types[0],
@@ -210,7 +210,7 @@ function makeLocations() {
     'https://goo.gl/maps/T6UTzANN5RS2',
     'Chef Edouardo Jordan’s second Ravenna eatery, a a highly personal exploration of Jordan’s heritage and Eater Seattle’s pick for 2017 Restaurant of the Year, is America’s next great Southern restaurant.',
     'https://www.junebabyseattle.com/');
-  new Activity(20,
+  new Activity(21,
     'Rachel\'s Ginger Beer U Village',
     prices[0],
     types[0],
@@ -219,7 +219,7 @@ function makeLocations() {
     'https://goo.gl/maps/1znrNzYthxK2',
     'Rachel Marshall’s U Village outpost hits all the familiar notes that drive her fans wild: a range of peppery and fruity ginger beer flavors, soft-serve floats, boozy frozen slushies, a gorgeous and unsettling mural by Stacey Rozich, and a ton of soothing plants.',
     'https://rachelsgingerbeer.com/pages/university-village');
-  new Activity(21,
+  new Activity(22,
     'Harvest Beat',
     prices[0],
     types[0],
@@ -228,7 +228,7 @@ function makeLocations() {
     'https://goo.gl/maps/mT1v8x9vx4u',
     'Eco-friendly destination offering intricate garden-to-table vegan dishes in set-price dinners.',
     'http://www.harvestbeat.com/');
-  new Activity(22,
+  new Activity(23,
     'Seattle Great Wheel',
     prices[0],
     types[1],
@@ -237,7 +237,7 @@ function makeLocations() {
     'https://goo.gl/maps/F5bFo74uGjQ2',
     'The Seattle Great Wheel is a giant Ferris wheel at Pier 57 on Elliott Bay in Seattle, Washington. With an overall height of 175 feet, it was the tallest Ferris wheel on the West Coast of the United States when it opened on June 29, 2012.',
     'https://seattlegreatwheel.com/');
-  new Activity(23,
+  new Activity(24,
     'PNW Peaks and Pours Tour',
     prices[3],
     types[1],
@@ -246,7 +246,7 @@ function makeLocations() {
     'https://goo.gl/maps/GL1NUbdHMMQ2',
     'Pacific Northwest Peaks & Pours tour is a craft beer enthusiasts dream come true. The 8-day excursion winds its way from Seattle to Portland, Ashland and Bend, with behind-the-scenes tours and tastings as some of the countries most coveted breweries. Along the way we will experiences the iconic sites of the region and make sure you have plenty of down time to enjoy exploring on your own.',
     'https://www.lonelyplanet.com/usa/tours/pacific-northwest-peaks-pours/a/pa-tou/v-54610P6/362096');
-  new Activity(24,
+  new Activity(25,
     'Private Mt. Rainier Day Trip',
     prices[3],
     types[1],
@@ -255,7 +255,7 @@ function makeLocations() {
     'https://goo.gl/maps/h6ytjQCxypB2',
     'Calling all lovers of America’s distinctive natural landscapes, this private 10-hour excursion to Mt. Ranier National Park is for you. Departing Seattle, you’ll explore the Paradise area of the park, home to the Jackson Visitor Center and Reflection Lake. Plus, you’ll marvel at Narada Falls — taller than Niagara Falls — and enjoy a picnic lunch at an optimum vantage point. Hotel pickup and drop-off in Seattle are included.',
     'https://www.viator.com/tours/Seattle/Private-Tour-Mt-Rainier-Day-Trip-from-Seattle/d704-3657PRVTRAINIER');
-  new Activity(25,
+  new Activity(26,
     'Private Shopping Pacific Place',
     prices[3],
     types[2],
@@ -264,7 +264,7 @@ function makeLocations() {
     'https://goo.gl/maps/XwqLHDd6dEJ2',
     'Pacific Place is an upscale shopping center located in downtown Seattle, WA on Sixth Avenue and Pine Street. It includes a skybridge that connects it to Seattle\'s Nordstrom',
     'http://www.pacificplaceseattle.com/');
-  new Activity(26,
+  new Activity(27,
     'Orca Watching Seaplane Tour',
     prices[2],
     types[1],
