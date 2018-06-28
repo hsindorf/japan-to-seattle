@@ -35,7 +35,7 @@ function runFilters() {
     activitiesContainer.appendChild(pEl);
   } else {
     activitiesContainer.textContent = '';
-    renderTheList(activitiesContainer);
+    renderTheList(activitiesFiltered, activitiesContainer);
   }
 }
 
