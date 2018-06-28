@@ -11,13 +11,13 @@ getFavoritesFromStorage();
 // PAGE RENDERING
 
 // renders the list of activities to the page
-function renderTheList(renderWhere) {
-  if (activitiesFiltered.length === 0) {
+function renderTheList(whichList, renderWhere) {
+  if (whichList.length === 0) {
     if (suitcaseContainer) {
       suitcaseContainer.textContent = 'No activities found! Head over to the activities page to add some to your suitcase.';
     }
   } else {
-    for (var i = 0; i < activitiesFiltered.length; i++) {
+    for (var i = 0; i < whichList.length; i++) {
 
       //outer container
       var activityContainer = document.createElement('div');
@@ -26,7 +26,7 @@ function renderTheList(renderWhere) {
 
       // image
       var activityImage = document.createElement('img');
-      activityImage.setAttribute('src', activitiesFiltered[i].image);
+      activityImage.setAttribute('src', whichList[i].image);
       activityContainer.appendChild(activityImage);
 
       // info to right of image
@@ -36,34 +36,34 @@ function renderTheList(renderWhere) {
 
       // name
       var activityName = document.createElement('h3');
-      activityName.textContent = activitiesFiltered[i].name;
+      activityName.textContent = whichList[i].name;
       activityInfo.appendChild(activityName);
 
       // price
       var activityPrice = document.createElement('p');
-      activityPrice.textContent = 'Price (USD): ' + activitiesFiltered[i].price;
+      activityPrice.textContent = 'Price (USD): ' + whichList[i].price;
       activityInfo.appendChild(activityPrice);
 
       // type
       var activityType = document.createElement('p');
-      activityType.textContent = 'Type: ' + activitiesFiltered[i].type;
+      activityType.textContent = 'Type: ' + whichList[i].type;
       activityInfo.appendChild(activityType);
 
       // location
       var activityArea = document.createElement('p');
-      activityArea.textContent = activitiesFiltered[i].area;
+      activityArea.textContent = whichList[i].area;
       activityInfo.appendChild(activityArea);
 
       // desc
       var activityDesc = document.createElement('p');
-      activityDesc.textContent = activitiesFiltered[i].desc;
+      activityDesc.textContent = whichList[i].desc;
       activityInfo.appendChild(activityDesc);
 
       // map
       var activityMapP = document.createElement('p');
       activityInfo.appendChild(activityMapP);
       var activityMapA = document.createElement('a');
-      activityMapA.setAttribute('href', activitiesFiltered[i].maps);
+      activityMapA.setAttribute('href', whichList[i].maps);
       activityMapA.setAttribute('class', 'button map-button');
       activityMapA.setAttribute('target', '_blank');
       activityMapA.textContent += ' Map';
@@ -72,7 +72,7 @@ function renderTheList(renderWhere) {
 
       // website
       var activityWebsiteA = document.createElement('a');
-      activityWebsiteA.setAttribute('href', activitiesFiltered[i].website);
+      activityWebsiteA.setAttribute('href', whichList[i].website);
       activityWebsiteA.setAttribute('class', 'button website-button');
       activityWebsiteA.setAttribute('target', '_blank');
       activityWebsiteA.textContent += ' Website';
@@ -83,9 +83,9 @@ function renderTheList(renderWhere) {
       var activityFavoriteP = document.createElement('p');
       activityInfo.appendChild(activityFavoriteP);
       var activityFavoriteB = document.createElement('button');
-      activityFavoriteB.setAttribute('id', activitiesFiltered[i].id);
+      activityFavoriteB.setAttribute('id', whichList[i].id);
       activityFavoriteB.setAttribute('class', 'button suitcase-button');
-      if (Activity.favorites[activitiesFiltered[i].id].favorite) {
+      if (Activity.favorites[whichList[i].id].favorite) {
         activityFavoriteB.textContent = ' Remove from Suitcase';
         activityFavoriteB.addEventListener('click', removeFavorite);
       } else {
