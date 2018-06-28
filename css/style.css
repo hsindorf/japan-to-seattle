@@ -287,3 +287,11 @@ footer {
 	margin-top: -10px;
 	margin-left: -20px;
 }
+
+/* translate widget */
+
+#google_translate_element {
+  position: absolute;
+  top: 4px;
+  left: 150px;
+}
