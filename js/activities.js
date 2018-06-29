@@ -28,8 +28,8 @@ function makeLocations() {
     areas[0],
     'img/pikeplace.jpg',
     'https://goo.gl/maps/bvptei6TXYx',
-    'description',
-    'website');
+    'One of the few authentic farmer\'s markets in the United States, this hub of delicious scents, delectable eats and delightful personalities attracts nine million visitors a year.',
+    'http://pikeplacemarket.org/');
   new Activity(1,
     'UW Campus',
     prices[0],
@@ -38,7 +38,7 @@ function makeLocations() {
     'img/uwCampus.jpg',
     'https://goo.gl/maps/9Fwvkcm9kkF2',
     'The UW is one of the world’s preeminent public universities. Ranked No. 13 in the world on the 2017 Academic Ranking of World Universities, the UW educates more than 54,000 students annually.','https://www.washington.edu/',
-    'website');
+    'http://www.washington.edu/visit/');
   new Activity(2,
     'Karaage Setsuna',
     prices[0],
@@ -46,8 +46,8 @@ function makeLocations() {
     areas[2],
     'img/karaageSetsuna.jpeg',
     'https://goo.gl/maps/TE3vLmsS6f82',
-    'description',
-    'website');
+    'Karaage Setsuna focuses on current Hawaiian fare, which has been constantly evolving with great influence of Asian, especially Japanese cuisine.',
+    'http://karaagesetsuna.com/');
   new Activity(3,
     'Suika Seattle',
     prices[1],
@@ -55,7 +55,7 @@ function makeLocations() {
     areas[2],
     'img/suikaSeattle.jpg',
     'https://goo.gl/maps/JuBDe3e4Bjk',
-    'description',
+    'Canadian-born Japanese specialist serves creative cocktails such as frozen sake & fruit sangria.',
     'http://suikaseattle.com');
   new Activity(4,
     'Ballard Locks',
@@ -146,7 +146,7 @@ function makeLocations() {
     'img/outletMall.jpg',
     'https://goo.gl/maps/X51dd4uozJP2',
     'Popular outlet mall shopping with stores like Coach, Nike, Aldo, and Ralph Lauren.',
-    'http://www.premiumoutlets.com/outlet/seattle');    
+    'http://www.premiumoutlets.com/outlet/seattle');
   new Activity(14,
     'Seattle Helicopter Tours',
     prices[1],
@@ -155,7 +155,7 @@ function makeLocations() {
     'img/helicopterTour.jpg',
     'https://goo.gl/maps/pzNReP8oxR82',
     'In a helicopter, you can rise above. Come face to face with iconic Mt. Rainier, soar past the bustling downtown waterfront, snap a perfect shot of the Space Needle, get a birds-eye view of beautiful Lake Washington, and experience the power of Snoqualmie Falls while hovering at the water\'s edge.',
-    'https://www.seattlehelitours.net/');    
+    'https://www.seattlehelitours.net/');
   new Activity(15,
     'Alki Beach',
     prices[0],
@@ -172,7 +172,7 @@ function makeLocations() {
     areas[3],
     'img/towerView.jpg',
     'https://goo.gl/maps/F9Rhg6pTKz92',
-    'Seattle local\'s choice for best view of the city',
+    'Seattle local\'s choice for best view of the city.',
     'https://columbiacenterseattle.com/');
   new Activity(17,
     'Seattle Seaplane Tours',
@@ -273,6 +273,37 @@ function makeLocations() {
     'https://goo.gl/maps/m1SEgj1cQbF2',
     'The spectacular natural beauty and relaxed rural lifestyle of the San Juan Islands feels like a world away… yet this unique Whale Watching seaplane flight and cruise is just a day-trip away from Seattle with Kenmore Air.',
     'https://www.kenmoreair.com/experiences/Whale-Watching-San-Juan-Islands/');
+  new Activity(28,
+    'Space Needle',
+    prices[1],
+    types[1],
+    areas[2],
+    'img/spaceneedle.jpg',
+    'https://goo.gl/maps/K6kQYhDJGPm',
+    'Built in 1962, the Space Needle has since become the symbol of Seattle, and one of the most recognizable structures in the world.',
+    'https://www.spaceneedle.com/home/');
+  new Activity(29,
+    'Seattle Center Monorail',
+    prices[0],
+    types[1],
+    areas[2],
+    'img/monorail.jpg',
+    'https://goo.gl/maps/fLKccsGY8sp',
+    'Seattle Center Monorail is a fun, quick, and historic link between Westlake Center and Seattle Center. Trains depart every 10 minutes!',
+    'http://www.seattlemonorail.com/');
+  new Activity(30,
+    'Museum of Pop Culture (MoPOP)',
+    prices[0],
+    types[1],
+    areas[2],
+    'img/emp.jpg',
+    'https://goo.gl/maps/yudDqH1y6xP2',
+    'Music, science fiction, and pop culture all come together at the fascinating Museum of Pop Culture.',
+    'http://www.mopop.org/');
 }
 
 makeLocations();
+
+// var prices = ['< $50', '$50 - $150', '$150 - $500', '$500+'];
+// var types = ['Food', 'Sightseeing', 'Shopping'];
+// var areas = ['Pike Place Market', 'Around UW Campus', 'Around Space Needle', 'Around Safeco Field', 'Outside of the City'];
